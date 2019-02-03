@@ -11,7 +11,8 @@ const message_container = document.querySelector('.messages');
 const form = document.querySelector('form');
 const input_box = document.querySelector('input');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => 
+{
  e.preventDefault();
  userQuery(input_box.value);
  input_box.value = '';
