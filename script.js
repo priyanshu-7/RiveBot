@@ -18,7 +18,8 @@ form.addEventListener('submit', (e) => {
 });
 
 //bot reply
-function botReply(message){
+function botReply(message)
+{
  message_container.innerHTML += `<div class="bot"><b>Bot:</b> ${message}</div>`;
  if(message === "CMD: gif images")
  {
@@ -36,7 +37,8 @@ function botReply(message){
 }
 
 //user query
-function userQuery(message){
+function userQuery(message)
+{
  message_container.innerHTML += `<div class="user"><b>You:</b> ${message}</div>`;
 
  bot.reply("local-user", message).then(function(reply) {
@@ -45,13 +47,15 @@ function userQuery(message){
 }
 
 //on bot successful load
-function botReady(){
+function botReady()
+{
  bot.sortReplies();
  botReply('Hello, I am a bot. You can chat with me or type in some commands (type "cmds" to see which commands I can handle) to which I will try to respond. To start, say "hello"!');
 }
 
 //on bot load fail
-function botNotReady(err){
+function botNotReady(err)
+{
  console.log("Bot failed to load", err);
 }
 
@@ -61,9 +65,12 @@ function randomGIF()
   var gif = Math.floor( Math.random() * randomGifArray.length);
   return randomGifArray[gif];
 }
-function gif() {
+
+function gif() 
+{
   message_container.innerHTML += `<div class="bot"><img src= ${randomGIF()} "height="100" width="100"/></div>`;
 }
+
 function length(s)
 {
   var len = s.length;
